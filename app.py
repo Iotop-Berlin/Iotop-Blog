@@ -1,12 +1,17 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+from flask_admin import Admin
+from flask_admin.contrib.sqla import ModelView
 
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
+app.config['SECRET_KEY']= "thisismysecretkeyadamandsamuel"
 
 db = SQLAlchemy(app)
+
+admin = Admin(app)
 
 class Blogpost(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -15,6 +20,8 @@ class Blogpost(db.Model):
     author = db.Column(db.String(20))
     date_posted = db.Column(db.DateTime)
     content = db.Column(db.Text)
+
+admin.add_view(ModelView(Posts, db.session))
 
 @app.route('/')
 def index():
