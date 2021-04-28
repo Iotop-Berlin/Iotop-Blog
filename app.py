@@ -1,8 +1,9 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, session, abort
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
+import sqlalchemy
 
 app = Flask(__name__)
 
@@ -21,7 +22,14 @@ class Blogpost(db.Model):
     date_posted = db.Column(db.DateTime)
     content = db.Column(db.Text)
 
-admin.add_view(ModelView(Posts, db.session))
+class SecureModelView(ModelView):
+    def is_accessible(self):
+        if 'logged_in' in session:
+            return True
+        else:
+            abort(403)
+
+admin.add_view(SecureModelView(Blogpost, db.session))
 
 @app.route('/')
 def index():
@@ -56,6 +64,22 @@ def addpost():
     db.session.commit()
 
     return redirect(url_for('index'))
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        if request.form.get("username") == "Iotopteam" and request.form.get("password") == "iotopteam2021pw":
+            session['logged_in'] = True
+            return redirect("/admin")
+        else:
+            return render_template("login.html", failed=True)
+    return render_template("login.html")
+
+
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect('/')
 
 if __name__ == '__main__':
     app.run(debug=True)
