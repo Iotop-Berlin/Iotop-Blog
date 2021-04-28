@@ -47,10 +47,6 @@ def post(post_id):
 
     return render_template('post.html', post=post)
 
-@app.route('/add')
-def add():
-    return render_template('add.html')
-
 @app.route('/addpost', methods=['POST'])
 def addpost():
     title = request.form['title']
@@ -70,7 +66,7 @@ def login():
     if request.method == "POST":
         if request.form.get("username") == "Iotopteam" and request.form.get("password") == "iotopteam2021pw":
             session['logged_in'] = True
-            return redirect("/admin")
+            return redirect("/admin/blogpost/")
         else:
             return render_template("login.html", failed=True)
     return render_template("login.html")
