@@ -11,15 +11,15 @@
     <title>Clean Iotop Blog </title>
     
     <!-- Bootstrap core CSS -->
-    <link href="static/CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/CSS/bootstrap.min.css" rel="stylesheet">
     
     <!-- Custom fonts for this template -->
-    <link href="static/CSS/fontawesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../static/CSS/fontawesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     
     <!-- Custom styles for this template -->
-    <link href="static/CSS/clean-blog.min.css" rel="stylesheet">
+    <link href="../static/CSS/clean-blog.min.css" rel="stylesheet">
     
   </head>
 
@@ -91,12 +91,35 @@
     </div>
   </footer>
 
-  <!-- Bootstrap Framework core JavaScript -->
-  <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"></script>
+  <!-- Typeform -->
+  <script>
+    (function() {
+      var qs,
+        js,
+        q,
+        s,
+        d = document,
+        gi = d.getElementById,
+        ce = d.createElement,
+        gt = d.getElementsByTagName,
+        id = "typef_orm_share",
+        b = "https://embed.typeform.com/";
+      if (!gi.call(d, id)) {
+        js = ce.call(d, "script");
+        js.id = id;
+        js.src = b + "embed.js";
+        q = gt.call(d, "script")[0];
+        q.parentNode.insertBefore(js, q);
+      }
+    })();
+  </script>
 
+  <!-- Bootstrap Framework core JavaScript -->
+  <script src="../static/JS/jquery.min.js"></script>
+  <script src="../static/JS/bootstrap.bundle.min.js') }}"></script>
+  
   <!-- Custom scripts -->
-  <script src="{{ url_for('static', filename='clean-blog.min.js') }}"></script>
+  <script src="../static/JS/clean-blog.min.js"></script>
 
 </body>
 

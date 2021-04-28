@@ -76,7 +76,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <!--<form name="addForm" id="addForm" method="POST" action="{{ url_for('addpost') }}" novalidate>
+        <form name="addForm" id="addForm" method="POST" action="{{ url_for('addpost') }}" novalidate>
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
               <label>Title</label>
@@ -108,7 +108,7 @@
           <br>
           <div id="success"></div>
           <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
-        </form>-->
+        </form>
       </div>
     </div>
   </div>
@@ -127,11 +127,11 @@
   </footer>
 
   <!-- Bootstrap Framework -->
-  <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"></script>
+  <script src="static/JS/jquery.min.js"></script>
+  <script src="static/JS/bootstrap.bundle.min.js"></script>
 
   <!-- Custom scripts -->
-  <script src="{{ url_for('static', filename='clean-blog.min.js') }}"></script>
+  <script src="static/JS/clean-blog.min.js"></script>
 
   <!-- Newsletter Popup Script-->
   <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>

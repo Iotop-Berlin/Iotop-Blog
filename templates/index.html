@@ -11,7 +11,7 @@
     <title>Clean Iotop Blog </title>
 
     <!-- Bootstrap core CSS -->
-    <link href="static/CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/CSS/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
     <link href="static/CSS/fontawesome.min.css" rel="stylesheet" type="text/css">
@@ -19,7 +19,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
-    <link href="static/CSS/clean-blog.min.css" rel="stylesheet">
+    <link href="../static/CSS/clean-blog.min.css" rel="stylesheet">
 
   </head>
 
@@ -42,7 +42,11 @@
             <a class="nav-link" href="{{ url_for('about') }}">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('add') }}">Contact</a>
+            <a class="nav-link typeform-share link"
+            href="https://form.typeform.com/to/IzKvb5RE?typeform-medium=embed-snippet"
+            data-mode="popup"
+            data-size="70"
+            data-hide-footer="true" target="_blank">Newsletter</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('login') }}">Login</a>
@@ -107,12 +111,35 @@
     </div>
   </footer>
 
-  <!-- Bootstrap Framework core JavaScript -->
-  <script src="static/JS/jquery.min.js"></script>
-  <script src="static/JS/bootstrap.bundle.min.js') }}"></script>
+  <!-- Typeform -->
+  <script>
+    (function() {
+      var qs,
+        js,
+        q,
+        s,
+        d = document,
+        gi = d.getElementById,
+        ce = d.createElement,
+        gt = d.getElementsByTagName,
+        id = "typef_orm_share",
+        b = "https://embed.typeform.com/";
+      if (!gi.call(d, id)) {
+        js = ce.call(d, "script");
+        js.id = id;
+        js.src = b + "embed.js";
+        q = gt.call(d, "script")[0];
+        q.parentNode.insertBefore(js, q);
+      }
+    })();
+  </script>
 
+  <!-- Bootstrap Framework core JavaScript -->
+  <script src="../static/JS/jquery.min.js"></script>
+  <script src="../static/JS/bootstrap.bundle.min.js') }}"></script>
+  
   <!-- Custom scripts -->
-  <script src="static/JS/clean-blog.min.js"></script>
+  <script src="../static/JS/clean-blog.min.js"></script>
 
 </body>
 
