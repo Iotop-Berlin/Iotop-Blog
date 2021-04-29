@@ -1,18 +1,3 @@
-
-
-
-
-/*//////////////////////////////////////////////////////////////////
-[ FONT ]*/
-/*
-@font-face {
-  font-family: OpenSans-Regular;
-  src: url('../fonts/OpenSans/OpenSans-Regular.ttf'); 
-}
-
-
-
-/*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 
 * {
@@ -330,7 +315,7 @@ input.input100 {
   padding: 0 20px;
   width: 100%;
   height: 60px;
-  background-color: #4272d7;
+  background-color: #5DDA94;
 
   font-family: Helvetica;
   font-size: 14px;
