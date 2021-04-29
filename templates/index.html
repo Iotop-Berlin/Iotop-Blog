@@ -11,18 +11,18 @@
     <title>Iotop Blog </title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../static/CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='CSS/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="static/CSS/fontawesome.min.css" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='CSS/fontawesome.min.css') }}" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
-    <link href="../static/CSS/clean-blog.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='CSS/clean-blog.min.css') }}" rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/static/IMG/favicon.ico"/>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='IMG/favicon.ico') }}"/>
 
   </head>
 
@@ -62,7 +62,7 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('static/IMG/home-bg.jpg">
+  <header class="masthead" style="background-image: url('static/IMG/iotop-about_blog_background.png')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -140,11 +140,11 @@
   </script>
 
   <!-- Bootstrap Framework core JavaScript -->
-  <script src="../static/JS/jquery.min.js"></script>
-  <script src="/static/JS/bootstrap.bundle.min.js"></script>
+  <script src="{{ url_for('static', filename='JS/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='JS/bootstrap.bundle.min.js') }}"></script>
   
   <!-- Custom scripts -->
-  <script src="../static/JS/clean-blog.min.js"></script>
+  <script src="{{ url_for('static', filename='JS/clean-blog.min.js') }}"></script>
 
 </body>
 
