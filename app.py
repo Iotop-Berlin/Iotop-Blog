@@ -5,7 +5,6 @@ from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 import sqlalchemy
 from flask_admin import BaseView, expose
-from flask_ckeditor import CKEditor, CKEditorField
 
 app = Flask(__name__)
 
