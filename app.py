@@ -4,6 +4,7 @@ from datetime import datetime
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 import sqlalchemy
+from flask_admin import BaseView, expose
 
 app = Flask(__name__)
 
@@ -29,7 +30,13 @@ class SecureModelView(ModelView):
         else:
             abort(403)
 
+class LogoutView(BaseView):
+    @expose('/')
+    def index(self):
+        return self.render('admin/logout.html')
+
 admin.add_view(SecureModelView(Blogpost, db.session))
+admin.add_view(LogoutView(name='Logout', endpoint='notify'))
 
 @app.route('/')
 def index():
