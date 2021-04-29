@@ -5,6 +5,7 @@ from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 import sqlalchemy
 from flask_admin import BaseView, expose
+from flask_ckeditor import CKEditor, CKEditorField
 
 app = Flask(__name__)
 
@@ -23,6 +24,7 @@ class Blogpost(db.Model):
     date_posted = db.Column(db.DateTime)
     content = db.Column(db.Text)
 
+
 class SecureModelView(ModelView):
     def is_accessible(self):
         if 'logged_in' in session:
@@ -34,6 +36,7 @@ class LogoutView(BaseView):
     @expose('/')
     def index(self):
         return self.render('admin/logout.html')
+
 
 admin.add_view(SecureModelView(Blogpost, db.session))
 admin.add_view(LogoutView(name='Logout', endpoint='notify'))
