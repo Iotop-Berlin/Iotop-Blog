@@ -73,7 +73,7 @@ def addpost():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        if request.form.get("username") == "Iotopteam" and request.form.get("password") == "iotopteam2021pw":
+        if request.form.get("username") == "Iotopteam2021" and request.form.get("password") == "#iotopteam2021pw#":
             session['logged_in'] = True
             return redirect("/admin/blogpost/")
         else:
