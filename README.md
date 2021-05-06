@@ -40,5 +40,5 @@ Choose (or create) a working directory on your own computer and change directory
 Clone your version onto your computer in that working directory. You don't know how to do that? Look [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
 Now you should be ready to get the starter template running on your computer!
 
-### Have fun, and if you have any question, you can [e-mail me](mailto:jonathan.caspari@code.berlin?subject=[GitHub]%20Source%20Han%20Sans)
+### Have fun, and if you have any question, you can [e-mail me](mailto:jonathan.caspari@code.berlin?subject=[GitHub]%20Source%20Han%20Sans).
 
